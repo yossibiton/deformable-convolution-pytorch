@@ -19,8 +19,7 @@ conv_offset2d = ConvOffset2d(
     in_channels=inC,
     out_channels=outC, 
     kernel_size=(kH, kW),
-    padding=1
-    ).cuda()
+    padding=1).cuda()
 
 inputs = Variable(torch.randn(N, inC, inH, inW).cuda())
 offset = conv(inputs)
